@@ -6,34 +6,17 @@
       <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-200 dark:bg-accent-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse-slow"></div>
     </div>
 
-    <!-- Header -->
-    <header class="relative z-10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="flex items-center">
-            <div class="flex items-center space-x-2">
-              <div class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-sm">ST</span>
-              </div>
-              <span class="text-xl font-display font-bold text-gray-900 dark:text-white">StudTrack</span>
-            </div>
-          </div>
-
-          <!-- Theme Toggle -->
-          <button
-            @click="toggleTheme"
-            class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-          >
-            <SunIcon v-if="isDark" class="w-5 h-5 text-gray-600 dark:text-gray-400" />
-            <MoonIcon v-else class="w-5 h-5 text-gray-600 dark:text-gray-400" />
-          </button>
-        </div>
-      </div>
-    </header>
-
     <!-- Main Content -->
-    <div class="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+    <div class="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 min-h-screen">
+      <!-- Theme Toggle - Floating -->
+      <button
+        @click="toggleTheme"
+        class="fixed top-6 right-6 z-20 p-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
+      >
+        <SunIcon v-if="isDark" class="w-5 h-5 text-gray-600 dark:text-gray-400" />
+        <MoonIcon v-else class="w-5 h-5 text-gray-600 dark:text-gray-400" />
+      </button>
+
       <div class="w-full max-w-6xl">
         <!-- Hero Section -->
         <div class="text-center mb-16">
