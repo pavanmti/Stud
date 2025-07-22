@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Login from '../views/Login.vue'
 import Dashboard from '../views/Dashboard.vue'
 import StudyTimer from '../views/StudyTimer.vue'
 import TaskManager from '../views/TaskManager.vue'
@@ -10,6 +11,11 @@ import Profile from '../views/Profile.vue'
 const routes = [
   {
     path: '/',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard
   },

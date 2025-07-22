@@ -86,7 +86,7 @@ export default {
     const mobileMenuOpen = ref(false)
 
     const navigation = [
-      { name: 'Dashboard', href: '/' },
+      { name: 'Dashboard', href: '/dashboard' },
       { name: 'Study Timer', href: '/timer' },
       { name: 'Tasks', href: '/tasks' },
       { name: 'Analytics', href: '/analytics' },
